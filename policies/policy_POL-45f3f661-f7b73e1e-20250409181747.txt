@@ -1,0 +1,23 @@
+INSURANCE POLICY DOCUMENT
+========================
+
+Policy Number: POL-45f3f661-f7b73e1e-20250409181747
+Issue Date: 2025-04-09T18:17:47.645217200
+
+INSURED INFORMATION
+-------------------
+Name: newuser
+Email: user1@example.com
+
+INSURANCE DETAILS
+-----------------
+Insurance Type: HEALTH
+Insurance Name: Basic Health Coverage
+Description: Essential health coverage for individuals and families
+Coverage Amount: $50000.00
+Premium: $200.00
+Status: ACTIVE
+
+TERMS AND CONDITIONS
+-------------------
+This policy is subject to the terms and conditions specified by the insurance provider.
