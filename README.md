@@ -23,6 +23,32 @@ A Spring Boot application for managing insurance policies, purchases, and policy
 
 The application is deployed and accessible at: https://insurancepurchase11.onrender.com
 
+### Database Access
+
+You can access the H2 database console directly:
+
+1. Access the H2 console at https://insurancepurchase11.onrender.com/h2-console
+2. Use the following connection details:
+   - JDBC URL: `jdbc:h2:file:/app/data/insurancedb`
+   - Username: `sa`
+   - Password: `render-production-password`
+
+### Adding Insurance Data
+
+While the application initializes with some default insurance policies, you may want to add custom insurance data:
+
+1. Login to the H2 console as described above
+2. Use SQL to insert additional insurance policies:
+
+```sql
+INSERT INTO INSURANCE (ID, NAME, DESCRIPTION, CATEGORY, PREMIUM, COVERAGE_AMOUNT, ACTIVE, MIN_AGE, MAX_AGE, MIN_INCOME, RECOMMENDED_GENDER)
+VALUES
+(RANDOM_UUID(), 'Premium Life Insurance', 'Comprehensive life coverage with additional benefits', 'LIFE', 250.00, 500000.00, true, 25, 60, 50000.00, 'ALL');
+```
+
+Categories can be: `LIFE`, `HEALTH`, `AUTO`, `HOME`, or `TRAVEL`.
+Recommended gender can be: `MALE`, `FEMALE`, or `ALL`.
+
 ## Getting Started
 
 ### Prerequisites
