@@ -13,7 +13,7 @@ Authorization: Bearer <your_jwt_token>
 To get a JWT token, you need to authenticate using your credentials:
 
 ```bash
-curl -X POST http://localhost:8080/api/users/login \
+curl -X POST https://insurancepurchase11.onrender.com/api/users/login \
   -H "Content-Type: application/json" \
   -d '{
     "username": "john.doe",
@@ -36,7 +36,7 @@ Response will contain your JWT token:
 ### Register a New User
 
 ```bash
-curl -X POST http://localhost:8080/api/users/register \
+curl -X POST https://insurancepurchase11.onrender.com/api/users/register \
   -H "Content-Type: application/json" \
   -d '{
     "username": "john.doe",
@@ -53,14 +53,14 @@ curl -X POST http://localhost:8080/api/users/register \
 ### Get User by ID
 
 ```bash
-curl -X GET http://localhost:8080/api/users/{userId} \
+curl -X GET https://insurancepurchase11.onrender.com/api/users/{userId} \
   -H "Authorization: Bearer <your_jwt_token>"
 ```
 
 ### Get User by Username
 
 ```bash
-curl -X GET http://localhost:8080/api/users/username/{username} \
+curl -X GET https://insurancepurchase11.onrender.com/api/users/username/{username} \
   -H "Authorization: Bearer <your_jwt_token>"
 ```
 
@@ -69,21 +69,21 @@ curl -X GET http://localhost:8080/api/users/username/{username} \
 ### Get All Insurances
 
 ```bash
-curl -X GET http://localhost:8080/api/insurances \
+curl -X GET https://insurancepurchase11.onrender.com/api/insurances \
   -H "Authorization: Bearer <your_jwt_token>"
 ```
 
 ### Get Insurance by ID
 
 ```bash
-curl -X GET http://localhost:8080/api/insurances/{insuranceId} \
+curl -X GET https://insurancepurchase11.onrender.com/api/insurances/{insuranceId} \
   -H "Authorization: Bearer <your_jwt_token>"
 ```
 
 ### Get Insurances by Category
 
 ```bash
-curl -X GET http://localhost:8080/api/insurances/category/{category} \
+curl -X GET https://insurancepurchase11.onrender.com/api/insurances/category/{category} \
   -H "Authorization: Bearer <your_jwt_token>"
 ```
 
@@ -92,7 +92,7 @@ Valid categories: `LIFE`, `HEALTH`, `AUTO`, `HOME`, `TRAVEL`
 ### Get Recommended Insurances
 
 ```bash
-curl -X GET http://localhost:8080/api/insurances/recommended \
+curl -X GET https://insurancepurchase11.onrender.com/api/insurances/recommended \
   -H "Authorization: Bearer <your_jwt_token>"
 ```
 
@@ -101,14 +101,14 @@ This endpoint returns insurance policies recommended for the authenticated user 
 ### Get Insurances by Type
 
 ```bash
-curl -X GET http://localhost:8080/api/insurances/type/{type} \
+curl -X GET https://insurancepurchase11.onrender.com/api/insurances/type/{type} \
   -H "Authorization: Bearer <your_jwt_token>"
 ```
 
 ### Get Active Insurances
 
 ```bash
-curl -X GET http://localhost:8080/api/insurances/active/{true|false} \
+curl -X GET https://insurancepurchase11.onrender.com/api/insurances/active/{true|false} \
   -H "Authorization: Bearer <your_jwt_token>"
 ```
 
@@ -117,7 +117,7 @@ curl -X GET http://localhost:8080/api/insurances/active/{true|false} \
 ### Purchase Insurance
 
 ```bash
-curl -X POST http://localhost:8080/api/purchases \
+curl -X POST https://insurancepurchase11.onrender.com/api/purchases \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer <your_jwt_token>" \
   -d '{
@@ -128,14 +128,14 @@ curl -X POST http://localhost:8080/api/purchases \
 ### Get User's Purchases
 
 ```bash
-curl -X GET http://localhost:8080/api/purchases \
+curl -X GET https://insurancepurchase11.onrender.com/api/purchases \
   -H "Authorization: Bearer <your_jwt_token>"
 ```
 
 ### Get Purchase by ID or Policy Number
 
 ```bash
-curl -X GET http://localhost:8080/api/purchases/{idOrPolicyNumber} \
+curl -X GET https://insurancepurchase11.onrender.com/api/purchases/{idOrPolicyNumber} \
   -H "Authorization: Bearer <your_jwt_token>"
 ```
 
@@ -147,7 +147,7 @@ You can provide either:
 ### Download Policy Document
 
 ```bash
-curl -X GET http://localhost:8080/api/purchases/{idOrPolicyNumber}/policy \
+curl -X GET https://insurancepurchase11.onrender.com/api/purchases/{idOrPolicyNumber}/policy \
   -H "Authorization: Bearer <your_jwt_token>" \
   -o policy_document.pdf
 ```
@@ -207,7 +207,7 @@ This endpoint returns a PDF file containing the insurance policy document. The f
 
 1. Replace `{userId}`, `{username}`, `{insuranceId}`, `{idOrPolicyNumber}`, `{category}`, and `{type}` with actual values
 2. Replace `<your_jwt_token>` with the actual JWT token received after authentication
-3. The server URL (`http://localhost:8080`) should be replaced with the actual deployed server URL
+3. The API is accessible at `https://insurancepurchase11.onrender.com`
 4. All requests except registration require authentication
 5. The policy document download will save a PDF file to your local directory
 6. Policy numbers follow the format: `POL-[User ID Prefix]-[Insurance ID Prefix]-[Timestamp]`

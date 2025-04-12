@@ -19,6 +19,10 @@ A Spring Boot application for managing insurance policies, purchases, and policy
 - iText PDF for document generation
 - Maven for dependency management
 
+## Live Demo
+
+The application is deployed and accessible at: https://insurancepurchase11.onrender.com
+
 ## Getting Started
 
 ### Prerequisites
@@ -31,8 +35,8 @@ A Spring Boot application for managing insurance policies, purchases, and policy
 1. Clone the repository:
 
    ```
-   git clone https://github.com/yourusername/insurance-purchase-api.git
-   cd insurance-purchase-api
+   git clone https://github.com/abhishekbeniwal57/Insurancepurchase.git
+   cd Insurancepurchase
    ```
 
 2. Build the project:
@@ -54,6 +58,22 @@ A Spring Boot application for managing insurance policies, purchases, and policy
 
 The application will be available at `http://localhost:8080`
 
+## Running Tests
+
+The project includes unit tests for service layers. To run the tests:
+
+```
+mvn test
+```
+
+This will execute all unit tests in the project. The tests cover key components including:
+
+- Insurance Service
+- Purchase Service
+- Policy Document Service
+
+You can find the test files in the `src/test/java/com/insurance/api/service` directory.
+
 ## API Usage
 
 See the [API_DOCUMENTATION.md](API_DOCUMENTATION.md) file for detailed API documentation.
@@ -63,7 +83,7 @@ See the [API_DOCUMENTATION.md](API_DOCUMENTATION.md) file for detailed API docum
 1. Register a user:
 
    ```bash
-   curl -X POST http://localhost:8080/api/users/register \
+   curl -X POST https://insurancepurchase11.onrender.com/api/users/register \
      -H "Content-Type: application/json" \
      -d '{
        "username": "john.doe",
@@ -80,21 +100,21 @@ See the [API_DOCUMENTATION.md](API_DOCUMENTATION.md) file for detailed API docum
 2. List available insurances:
 
    ```bash
-   curl -X GET http://localhost:8080/api/insurances \
+   curl -X GET https://insurancepurchase11.onrender.com/api/insurances \
      -H "Authorization: Bearer <your_jwt_token>"
    ```
 
 3. Get recommended insurances:
 
    ```bash
-   curl -X GET http://localhost:8080/api/insurances/recommended \
+   curl -X GET https://insurancepurchase11.onrender.com/api/insurances/recommended \
      -H "Authorization: Bearer <your_jwt_token>"
    ```
 
 4. Purchase an insurance:
 
    ```bash
-   curl -X POST http://localhost:8080/api/purchases \
+   curl -X POST https://insurancepurchase11.onrender.com/api/purchases \
      -H "Content-Type: application/json" \
      -H "Authorization: Bearer <your_jwt_token>" \
      -d '{
@@ -104,7 +124,7 @@ See the [API_DOCUMENTATION.md](API_DOCUMENTATION.md) file for detailed API docum
 
 5. Download policy document:
    ```bash
-   curl -X GET http://localhost:8080/api/purchases/{purchaseId}/policy \
+   curl -X GET https://insurancepurchase11.onrender.com/api/purchases/{purchaseId}/policy \
      -H "Authorization: Bearer <your_jwt_token>" \
      -o policy.pdf
    ```
@@ -164,3 +184,7 @@ See the [API_DOCUMENTATION.md](API_DOCUMENTATION.md) file for detailed API docum
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+## GitHub Repository
+
+The source code is available at: https://github.com/abhishekbeniwal57/Insurancepurchase
